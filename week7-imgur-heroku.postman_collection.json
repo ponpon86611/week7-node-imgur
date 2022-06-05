@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "e4386834-a615-4e10-8dcc-fafb839c51f3",
+		"name": "week7-imgur-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6469607"
+	},
+	"item": [
+		{
+			"name": "上傳圖片",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWM5YTIwY2MwZjk3ZjBjNDcwMTlmYSIsImlhdCI6MTY1NDQzMDI3NCwiZXhwIjoxNjU1MDM1MDc0fQ.CTaCnZR5E-9crHn5aFX-8FPtNaBuIdSyAYhZc1w4808",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/C:/Users/Pon/Downloads/pexels-photo-1658967.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/upload",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"huang apple\",\r\n    \"email\": \"apple0203@gmail.com\",\r\n    \"password\": \"dsxer526\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/users/sign_up",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登入",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"apple0203@gmail.com\",\r\n    \"password\": \"dsxer526\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改密碼",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWM5YTIwY2MwZjk3ZjBjNDcwMTlmYSIsImlhdCI6MTY1NDQzMDI3NCwiZXhwIjoxNjU1MDM1MDc0fQ.CTaCnZR5E-9crHn5aFX-8FPtNaBuIdSyAYhZc1w4808",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"password\": \"asxcd9\",\r\n   \"confirmPassword\":\"asxcd9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/users/updatePassword",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得個人資訊",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWM5YTIwY2MwZjk3ZjBjNDcwMTlmYSIsImlhdCI6MTY1NDQzMDI3NCwiZXhwIjoxNjU1MDM1MDc0fQ.CTaCnZR5E-9crHn5aFX-8FPtNaBuIdSyAYhZc1w4808",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改個人資訊",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWM5YTIwY2MwZjk3ZjBjNDcwMTlmYSIsImlhdCI6MTY1NDQzMDI3NCwiZXhwIjoxNjU1MDM1MDc0fQ.CTaCnZR5E-9crHn5aFX-8FPtNaBuIdSyAYhZc1w4808",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"apple ro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"629c9a20cc0f97f0c47019fa\",\r\n    \"content\":\"月底又要開會了\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改貼文 Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"肚子餓了1122\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/posts/629ca46274c00332c5220c11",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"629ca46274c00332c5220c11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/posts/629ca46274c00332c5220c11",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"629ca46274c00332c5220c11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://serene-oasis-06603.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"serene-oasis-06603",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
